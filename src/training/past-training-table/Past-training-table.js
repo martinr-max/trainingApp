@@ -45,7 +45,7 @@ const PastTrainingTable = () => {
 
   const onDeleteExercise = async (exerciseId) => {
     try {
-      const response =  await fetch(`https://training-app-d460e.firebaseio.com/exercises/${[exerciseId]}.json`,
+        const response =  await fetch(`https://training-app-d460e.firebaseio.com/exercises/${[exerciseId]}.json`,
         { method: "DELETE" });
         response.json();
         setFinishedExercises(prevExercises => prevExercises.filter(ex => ex.id !== exerciseId));
@@ -70,7 +70,6 @@ const PastTrainingTable = () => {
             </TableHead>
             <TableBody>
               { finishedExercises && uid && finishedExercises.map((row) => (
-               
                 <TableRow key={row.id}>
                   <TableCell component="th" scope="row">{row.name}</TableCell>
                   <TableCell align="right">{Math.round(row.duration)}.s</TableCell>

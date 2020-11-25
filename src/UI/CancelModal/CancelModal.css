@@ -1,0 +1,16 @@
+.ModalPanel {
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5rem;
+    text-align: center;
+    border-radius: 5px;
+    border: transparent;
+}
+
+.button {
+    display: block;
+    margin-bottom: 12px;
+}

@@ -1,0 +1,31 @@
+.main_page_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.mainPage_title {
+    text-align: center;
+    margin-top: 17px;
+}
+
+.mainPage_footer {
+    display: flex;
+    align-self: flex-end;
+}
+
+img {
+    width: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 768px) {
+    img{
+      width: 100%;
+    }
+  }

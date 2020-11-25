@@ -1,0 +1,10 @@
+.drawer_list a {
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+
+}
+
+.drawer_list li {
+    margin-bottom: 12px;
+}

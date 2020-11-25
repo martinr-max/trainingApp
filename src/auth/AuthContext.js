@@ -34,14 +34,15 @@ export const AuthProvider = ({ children }) => {
 	}
 
 	return (
-		<AuthContext.Provider
-         value={{
-              uid,
-              user,
-              authenticated: user !== null,
-              setUser,
-              logOut,
-              loadingAuthState
-        }}>      {children}    
+	 <AuthContext.Provider
+        	value={{
+              	uid,
+              	user,
+              	authenticated: user !== null,
+              	setUser,
+              	logOut,
+              	loadingAuthState
+        }}>      
+		{children}    
         </AuthContext.Provider>);
 }

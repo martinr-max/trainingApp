@@ -108,8 +108,8 @@ const CurrentTrainingTab = () => {
         <FormControl >
           <InputLabel >Exercises</InputLabel>
           <Select
-			disabled={loading}
-			open={startExercise}
+	    disabled={loading}
+	    open={startExercise}
             onClose={CloseChooseExercise}
             onOpen={OpenChoosedExercise}
             value={exercise}

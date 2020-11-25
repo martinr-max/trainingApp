@@ -18,27 +18,22 @@ export default function MyAppBar() {
 		setOpen(!open);
 	};
 
-	return (
-		<div className="appBar_root">
-      <AppBar position="static">
-        <Toolbar>
-        <IconButton
-            color="inherit"
-            aria-label="Open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className="menuButton"
-          >
-          <MenuIcon  />
-          </IconButton>
-            {open && <PersistentDrawerLeft handleDrawerToggle={handleDrawerToggle} open={open}/>}
-          <h1>My App</h1>
-          <div className="spacer"></div>
-          <div className="navLinks">
-          <NavLinks />
-          </div>
-        </Toolbar>
-      </AppBar>
-    </div>
-	);
+	return(	
+	  <div className="appBar_root">
+	   <AppBar position="static">
+	    <Toolbar>
+	      <IconButton color="inherit" aria-label="Open drawer" edge="start" onClick={handleDrawerToggle} className="menuButton">
+		<MenuIcon />
+	      </IconButton>
+	      {open &&
+	      <PersistentDrawerLeft handleDrawerToggle={handleDrawerToggle} open={open} />}
+	      <h1>My App</h1>
+	      <div className="spacer"></div>
+	      <div className="navLinks">
+		<NavLinks />
+	      </div>
+	    </Toolbar>
+	   </AppBar>
+	  </div>
+	 );
 }

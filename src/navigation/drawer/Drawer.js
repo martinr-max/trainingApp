@@ -40,11 +40,14 @@ const drawerWidth = 240;const useStyles = makeStyles(theme => ({
   }));
 
 
-export default function PersistentDrawerLeft({handleDrawerToggle, open, onLogOut}) {
+export default function PersistentDrawerLeft({
+  handleDrawerToggle,
+  open,
+  onLogOut
+  }) {
 
-    const classes = useStyles();
-    const theme = useTheme();
-    
+  const classes = useStyles();
+  const theme = useTheme();
 
   const drawer = (
     <div className="drawer_list">
@@ -53,10 +56,9 @@ export default function PersistentDrawerLeft({handleDrawerToggle, open, onLogOut
       </List>
     </div>
   );
-        
-    
-      return (
-          <div>
+
+  return (
+    <div>
         <nav className={classes.drawer}>
         <Hidden smUp implementation="css">
           <Drawer

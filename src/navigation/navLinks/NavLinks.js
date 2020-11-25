@@ -18,5 +18,5 @@ export default function NavLinks() {
             {authenticated &&
             <li><Link to="/training-tab"className="headerLink" >Training</Link></li> }
         </ul>
-    )
+    );
 }

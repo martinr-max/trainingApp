@@ -12,40 +12,40 @@ import { AuthContext } from '../AuthContext';
 
 const LoginForm = () => {
 
-	const [values, setValues] = useState({
-		email: "",
-		password: ""
-	});
+  const [values, setValues] = useState({
+    email: "",
+    password: ""
+  });
 
-	const [error, setError] = useState('');
+  const [error, setError] = useState('');
 
-	const history = useHistory();
-	const authContext = useContext(AuthContext)
+  const history = useHistory();
+  const authContext = useContext(AuthContext);
 
-	const handleChange = (event) => {
-		event.persist();
-		setValues(values => ({
-			...values,
-			[event.target.name]: event.target.value
-		}));
-	}
+  const handleChange = (event) => {
+    event.persist();
+    setValues(values => ({
+      ...values,
+      [event.target.name]: event.target.value
+    }));
+  }
 
-	const handleSubmit = useCallback((event) => {
-		event.preventDefault();
-		firebase
-			.auth()
-			.signInWithEmailAndPassword(values.email, values.password)
-			.then((response) => {
-				authContext.setUser(response)
-				history.push("/training-tab");
-			})
-			.catch(error => {
-				setError(error.message);
-			});
-	}, [authContext, history, values.email, values.password]);
+  const handleSubmit = useCallback((event) => {
+    event.preventDefault();
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(values.email, values.password)
+      .then((response) => {
+        authContext.setUser(response)
+        history.push("/training-tab");
+      })
+      .catch(error => {
+        setError(error.message);
+      });
+  }, [authContext, history, values.email, values.password]);
 
-	return (
-		<div>
+  return (
+    <div>
       <React.Fragment>
         {error && <Alert severity="error"> {error} </Alert>}
         {!error &&
@@ -76,8 +76,8 @@ const LoginForm = () => {
         </form>    
       </Container>}
     </React.Fragment>
-  </div>
-	);
+   </div>
+  );
 }
 
 export default withRouter(LoginForm);

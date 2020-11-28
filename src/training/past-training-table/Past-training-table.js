@@ -16,10 +16,9 @@ const PastTrainingTable = () => {
   const { uid } = useContext(AuthContext);
 
   useEffect(() => {
-
     const FetchData = async () => {
       try {
-        const response = await  fetch('https://training-app-d460e.firebaseio.com/exercises.json')
+        const response = await  fetch('https://training-app-d460e.firebaseio.com/exercises.json');
         let responseData = await response.json();
         const dataArray = [];
         for(const key in responseData) {
@@ -31,7 +30,7 @@ const PastTrainingTable = () => {
             calories: responseData[key].calories,
             status: responseData[key].status,
             date: responseData[key].date
-          })
+          });
         }
         let filteredDataArray = dataArray.filter(ex => ex.exUserId === uid );
         setFinishedExercises(filteredDataArray);
@@ -87,7 +86,7 @@ const PastTrainingTable = () => {
             </TableBody>
           </Table>
         </TableContainer>
-      );
+    );
 }
 
 export default PastTrainingTable;

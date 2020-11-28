@@ -34,7 +34,6 @@ const CancelModal = ({open, handleClose, cancelTraining}) => {
             </Modal>
           </div>
         );
-
 }
 
 export default CancelModal;

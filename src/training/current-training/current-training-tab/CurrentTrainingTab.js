@@ -77,13 +77,13 @@ const CurrentTrainingTab = () => {
       let duration = currentExercise.current.duration / 100 * 1000;
       if (loading) {
         interval.current = setInterval(() => {
-          setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 1))
+          setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 1));
         }, duration);
       }
       if (progress >= 100) {
         sendData('completed');
       }
-      return () => clearInterval(interval.current)
+      return () => clearInterval(interval.current);
     }
 
   }, [loading, progress, exercise, uid, sendData]);

@@ -6,8 +6,7 @@ import { Container, Typography } from '@material-ui/core';
 const MainPage = () => {
 
     const imgURL = 'https://static.vecteezy.com/system/resources/previews/000/095/371/non_2x/sports-vector-illustration.jpg'
-    
-    
+   
     return(
         <div>
             <Container>
@@ -26,8 +25,7 @@ const MainPage = () => {
               
             </Container>
         </div>
-    )
-
+    );
 }
 
 export default MainPage;
